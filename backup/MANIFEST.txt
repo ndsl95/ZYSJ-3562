@@ -1,0 +1,24 @@
+ZYSJ-2362B 出厂固件完整备份清单
+设备序列号: B3J4YDPE   平台: RK3562 / ZYSJ-2362K v01
+系统: Android 13, build rk3562_t-userdebug 13 TQ2A.230305.008.F1
+提取方式: 运行中的系统内 root 权限 dd 读出, 经以太网传回 PC
+分区表: GPT (见 gpt_partitions.json / emmc_head32m.img)
+========================================================================================
+baseparameter.img             1048576 bytes  52640e66239ae576ba06efe2ea3850c6611d77b7bacd9419b2cf1bd271d8d36f
+boot.img                     67108864 bytes  d42f82f510f987ad2dbe860592c2390c8ea35af3bb213f86dba3eb37b198cdab
+dtbo.img                      4194304 bytes  d639d1236c2906b144fe3d16a0b8ee462024b1bb6792fe32336dc5793ad71137
+emmc_head32m.img             33554432 bytes  af04d76d82f965ce6b2c6da6fdcb1e5ba4fec6eb249836d223558c75c0f6c178
+frp.img                        524288 bytes  5564c51ed7287ca16f8e123ea94fe2ea795983a2e8cdf17f59c960bebe4a566c
+metadata.img                 16777216 bytes  0ccf164c51732b74b528be5d36b7e0dad28c5bbe7d19d17b5ea8556daed7cdc9
+misc.img                      4194304 bytes  adeca5d4a480a50003ea6f62aaba68ab28a51aa533f1b6ead751b220d3f43791
+mmcblk2boot0.img              4194304 bytes  bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8
+mmcblk2boot1.img              4194304 bytes  bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8
+recovery.img                100663296 bytes  f11c016f8a78bd8cc9d13fe178a1cff3c5f5df420720d548855e584322e881f4
+security.img                  4194304 bytes  d8aff3114c34d34349c9315f652b1f3e6ef471b7aa810b53a9b03507fd8f9060
+super.img                  3263168512 bytes  a06371ea459d8110a3e52b806b41191e991ad2c4ce937c7318e93b4865727ab0
+trust.img                     4194304 bytes  bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8
+uboot.img                     4194304 bytes  08f92d8123723f15a7dab8f237a0333c6149518bd30987e75e2fa3d48837f0ac
+userdata.img              11477155840 bytes  370041c2521f0e3f3647b19a1b5cd2a187bd26fa5e0fc21d0127e71558e8af1c
+vbmeta.img                    1048576 bytes  76ff77959f2451ee3838de5b2d90a0e21017345cac4f7ce56c9da7a630edc752
+========================================================================================
+合计 14990409728 bytes (13.96 GB), 16 个文件

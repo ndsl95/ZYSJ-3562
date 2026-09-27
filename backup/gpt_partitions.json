@@ -1,0 +1,92 @@
+[
+ {
+  "name": "security",
+  "first_lba": 8192,
+  "last_lba": 16383,
+  "bytes": 4194304
+ },
+ {
+  "name": "uboot",
+  "first_lba": 16384,
+  "last_lba": 24575,
+  "bytes": 4194304
+ },
+ {
+  "name": "trust",
+  "first_lba": 24576,
+  "last_lba": 32767,
+  "bytes": 4194304
+ },
+ {
+  "name": "misc",
+  "first_lba": 32768,
+  "last_lba": 40959,
+  "bytes": 4194304
+ },
+ {
+  "name": "dtbo",
+  "first_lba": 40960,
+  "last_lba": 49151,
+  "bytes": 4194304
+ },
+ {
+  "name": "vbmeta",
+  "first_lba": 49152,
+  "last_lba": 51199,
+  "bytes": 1048576
+ },
+ {
+  "name": "boot",
+  "first_lba": 51200,
+  "last_lba": 182271,
+  "bytes": 67108864
+ },
+ {
+  "name": "recovery",
+  "first_lba": 182272,
+  "last_lba": 378879,
+  "bytes": 100663296
+ },
+ {
+  "name": "backup",
+  "first_lba": 378880,
+  "last_lba": 1165311,
+  "bytes": 402653184
+ },
+ {
+  "name": "cache",
+  "first_lba": 1165312,
+  "last_lba": 1951743,
+  "bytes": 402653184
+ },
+ {
+  "name": "metadata",
+  "first_lba": 1951744,
+  "last_lba": 1984511,
+  "bytes": 16777216
+ },
+ {
+  "name": "frp",
+  "first_lba": 1984512,
+  "last_lba": 1985535,
+  "bytes": 524288
+ },
+ {
+  "name": "baseparameter",
+  "first_lba": 1985536,
+  "last_lba": 1987583,
+  "bytes": 1048576
+ },
+ {
+  "name": "super",
+  "first_lba": 1987584,
+  "last_lba": 8360959,
+  "bytes": 3263168512
+ },
+ {
+  "name": "userdata",
+  "first_lba": 8360960,
+  "last_lba": 30777279,
+  "bytes": 11477155840
+ }
+]
