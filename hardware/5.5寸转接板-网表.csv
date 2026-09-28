@@ -1,4 +1,4 @@
-﻿Net,RefDes,Pin,Note
+Net,RefDes,Pin,Note
 GND,J1,4,主板侧 GND
 GND,J1,9,主板侧 GND
 GND,J1,10,主板侧 GND
@@ -23,8 +23,9 @@ GND,U1,2,恒流驱动 GND
 GND,C1,2,12V 输入电容负
 GND,C2,2,3V3 去耦电容负
 GND,C3,2,1V8 去耦电容负
-GND,C4,2,DIM 滤波电容负
+GND,C4,2,DIM 滤波电容负（PWM 调光时不贴 C4）
 GND,P2,2,外部 PWM 输入地
+GND,R1,2,恒流采样电阻接地
 MIPI_D0P,J1,20,主板 MiPi0+
 MIPI_D0P,J2,2,屏 DSI-D0P
 MIPI_D0N,J1,21,主板 MiPi0-
@@ -53,17 +54,18 @@ BL_12V,J1,1,主板 LED+ 12V
 BL_12V,J1,2,主板 LED+ 12V
 BL_12V,J1,3,主板 LED+ 12V
 BL_12V,U1,1,恒流驱动 VIN
+BL_12V,J2,35,屏 LEDA（共阳，直接接 12V）
+BL_12V,J2,36,屏 LEDA（共阳，直接接 12V）
 BL_12V,C1,1,10uF/25V 输入储能
-BL_DIM,U1,3,恒流驱动 DIM
-BL_DIM,C4,1,100nF
+BL_DIM,U1,3,恒流驱动 DIM（PWM 型，≤25kHz）
+BL_DIM,C4,1,100nF（PWM 调光时不贴）
 BL_DIM,R6,2,1k
-BL_DIM,JP1,2,跳线中心
+BL_DIM,JP1,2,跳线中心（短接=常亮满亮）
 BL_PWM_EXT,P2,1,外部 PWM 输入焊盘
 BL_PWM_EXT,R6,1,1k
-LED_A,U1,4,恒流驱动 LED+ 输出
-LED_A,J2,35,屏 LEDA
-LED_A,J2,36,屏 LEDA
-LED_K,U1,5,恒流驱动 LED- 回检
+LED_CS,U1,5,恒流驱动 CS 采样端
+LED_CS,R1,1,恒流采样电阻（设定 80mA）
+LED_K,U1,4,恒流驱动 恒流端（内部 MOS 漏极）
 LED_K,J2,28,屏 LEDK
 LED_K,J2,29,屏 LEDK
 NC,J1,5,主板 LED- 本设计不使用
