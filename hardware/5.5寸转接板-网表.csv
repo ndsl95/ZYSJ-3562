@@ -19,13 +19,14 @@ GND,J2,30,屏侧 GND
 GND,J2,32,屏侧 GND
 GND,J2,33,屏侧 GND
 GND,J2,37,屏侧 GND
-GND,U1,2,恒流驱动 GND
+GND,U1,7,恒流驱动 GND（SOP8-EP pin7）
+GND,U1,9,恒流驱动 EP 散热焊盘（亦为芯片地，必须接 GND）
 GND,C1,2,12V 输入电容负
 GND,C2,2,3V3 去耦电容负
 GND,C3,2,1V8 去耦电容负
 GND,C4,2,DIM 滤波电容负（PWM 调光时不贴 C4）
 GND,P2,2,外部 PWM 输入地
-GND,R1,2,恒流采样电阻接地
+GND,R1,2,电流设定电阻（SET）接地
 MIPI_D0P,J1,20,主板 MiPi0+
 MIPI_D0P,J2,2,屏 DSI-D0P
 MIPI_D0N,J1,21,主板 MiPi0-
@@ -53,21 +54,21 @@ VDD_1V8,C3,1,100nF 去耦
 BL_12V,J1,1,主板 LED+ 12V
 BL_12V,J1,2,主板 LED+ 12V
 BL_12V,J1,3,主板 LED+ 12V
-BL_12V,U1,1,恒流驱动 VIN
+BL_12V,U1,3,恒流驱动 VIN（SOP8-EP pin3）
 BL_12V,J2,35,屏 LEDA（共阳，直接接 12V）
 BL_12V,J2,36,屏 LEDA（共阳，直接接 12V）
 BL_12V,C1,1,10uF/25V 输入储能
-BL_DIM,U1,3,恒流驱动 DIM（PWM 型，≤25kHz）
+BL_DIM,U1,1,恒流驱动 PWM1（SOP8-EP pin1，PWM 型输入，门槛 VIH>=1.4V）
 BL_DIM,C4,1,100nF（PWM 调光时不贴）
 BL_DIM,R6,2,1k
 BL_DIM,JP1,2,跳线中心（短接=常亮满亮）
 BL_PWM_EXT,P2,1,外部 PWM 输入焊盘
 BL_PWM_EXT,R6,1,1k
-LED_CS,U1,5,恒流驱动 CS 采样端
-LED_CS,R1,1,恒流采样电阻（设定 80mA）
-LED_K,U1,4,恒流驱动 恒流端（内部 MOS 漏极）
+LED_K,U1,2,恒流驱动 LED1 电流输出端（SOP8-EP pin2，低边 sink）
 LED_K,J2,28,屏 LEDK
 LED_K,J2,29,屏 LEDK
+LED_SET,U1,8,恒流驱动 SET1 电流设定端（SOP8-EP pin8）
+LED_SET,R1,1,电流设定电阻（R_SET=12.7k -> 约 78.7mA）
 NC,J1,5,主板 LED- 本设计不使用
 NC,J1,6,主板 LED- 本设计不使用
 NC,J1,7,主板 LED- 本设计不使用
@@ -91,3 +92,6 @@ NC,J2,26,屏侧 NC
 NC,J2,31,屏侧 NC
 NC,J2,34,屏侧 NC
 NC,J2,40,屏侧 NC
+NC,U1,4,通道2 SET2 不用（悬空或按需接地）
+NC,U1,5,通道2 PWM2 不用（建议接地关断，见选型文档）
+NC,U1,6,通道2 LED2 不用（悬空）
